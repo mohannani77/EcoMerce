@@ -44,7 +44,7 @@ router.get("/", async (req, res) => {
 
 // GET PRODUCT BY ID
 
-router.get("/find/:id",isAdmin, async (req, res) => {
+router.get("/find/:id", async (req, res) => {
   try {
     const products = await Product.findById(req.params.id);
     res.status(200).send(products);
