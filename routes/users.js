@@ -38,7 +38,7 @@ router.get("/stats", isAdmin, async (req, res) => {
 
 //Get All users
 
-router.get("/", isAdmin, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const users = await user.find().sort({ _id: -1 });
     res.status(200).send(users);
